@@ -161,7 +161,7 @@ app.post('/login', async (request, response) => {
 
             const jwt = await jsonWebToken.sign(payload, 'MY_TOKEN')
 
-            response.send({ "jwtToken": jwt })
+            response.send({ "jwtToken": jwt,CustomerName:getResult.name })
 
 
 
